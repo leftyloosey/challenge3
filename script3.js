@@ -1,3 +1,4 @@
+//variables and arrays declared at the start
 var yesUpper = "" 
 var yeSpecial = ""
 var yesNum = ""
@@ -9,19 +10,22 @@ var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var alphaSpecials = "!\"#$%&\'()*+,-/:;<=>?@[]^_`{|}~"
 var alphaNums = "0123456789"
 
+//this function is for restarting the length-finding function
 function reHowMany() {
     howMany()
 }
-
+//the randomizer
 function getRandom(a) {
     return a[Math.floor(Math.random() * a.length)]
 }
-
+//this function is a loop that adds a new random character until the length 
+    //matches the user input
 function addToPass() {
     for (i = 0; i < totalChars; i++) {
         passWord.push(getRandom(ansDindex))[i]
         }
 }
+//for finding the length of the password
 function howMany() {
     totalChars = prompt("how many characters?")
     if (isNaN(totalChars) || totalChars < 8 || totalChars > 128) {
@@ -29,6 +33,7 @@ function howMany() {
         reHowMany()
     }
 }
+//a function for making sure each user input is in y or n format
 function yOn(a) {
     while (a !== 'y' || a !== 'n') {
         window.b = prompt("choose y or n.")
@@ -37,7 +42,7 @@ function yOn(a) {
             }
     }
 }
-
+//the next three functions gather the parameters of the password
 function getUpper() {
     alert("include uppercase?")
     yOn(yesUpper)
@@ -59,6 +64,7 @@ function getNum() {
 
 getUpper()
 
+//this last block is for distilling all the raw data into a useable string
 ansIndex = [yesUpper, yeSpecial, yesNum, alphaLower]
 
 if (ansIndex[0] == 'y') {

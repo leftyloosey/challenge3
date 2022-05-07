@@ -38,6 +38,7 @@ function yOn(a) {
     while (a !== 'y' || a !== 'n') {
         window.b = prompt("choose y or n.")
         if (window.b === 'y' || window.b === 'n') {
+            alert("thanks!")
             return
             }
     }

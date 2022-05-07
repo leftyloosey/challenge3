@@ -1,4 +1,4 @@
-# UofU Coding Bootcamp Challenge 3#
+# UofU Coding Bootcamp Challenge #3
 
 ## Welcome
 
